@@ -1,0 +1,35 @@
+[project]
+name = "alirec"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Alex Myers",email = "alexrtm14@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "datasets (>=4.1.1,<5.0.0)",
+    "pandas (>=2.3.2,<3.0.0)",
+    "numpy (>=2.3.3,<3.0.0)",
+    "torch (>=2.8.0,<3.0.0)",
+    "scikit-learn (>=1.7.2,<2.0.0)",
+    "pgeocode (>=0.5.0,<0.6.0)",
+    "matplotlib (>=3.10.7,<4.0.0)"
+]
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.1.1"
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu129"
+priority = "supplemental"
+
+
+[tool.poetry.dependencies]
+torch = {source = "pytorch"}
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
